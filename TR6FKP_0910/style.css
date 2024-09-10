@@ -46,6 +46,11 @@ img {
     max-height: 30vh;
 }
 
+ul{
+    list-style: outside;
+    padding-top: 1em;
+}
+
 .content{
     width: 80vw;
     height: 80vh;
@@ -63,7 +68,14 @@ img {
 }
 
 .text{
-    padding-top: 5rem;
+    margin-top: 5rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text h3{
+    padding-top: 1rem;
 }
 
 footer {
