@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nepgyules>
+    <konferencia>
+        <cim>XML alapjai</cim>
+        <hallgatok>
+            <hallgato>
+                <nev>Lakatos Olga</nev>
+                <lakcim>Váci út 6.</lakcim>
+            </hallgato>
+        </hallgatok>
+        <helyszin>E 20</helyszin>
+        <eloado>
+            <nev>Pogonyi Ábel</nev>
+            <adoszam>0123456789</adoszam>
+            <lakcim>Vas út 6.</lakcim>
+        </eloado>
+        <datum>2024.09.17.</datum>
+    </konferencia>
+</nepgyules>
