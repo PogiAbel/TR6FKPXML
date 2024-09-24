@@ -1,6 +1,6 @@
-<!ELEMENT PA_orarend (ora)*>
+<!ELEMENT PA_orarend (ora+)>
 <!ELEMENT ora (targy, idopont, helyszin, oktato, szak)>
-<!ATTLIST ora id CDATA #REQUIRED>
+<!ATTLIST ora id ID #REQUIRED>
 <!ATTLIST ora tipus (eloadas | gyakorlat) "eloadas">
 <!ELEMENT targy (#PCDATA)>
 <!ELEMENT idopont (nap, tol, ig)>
