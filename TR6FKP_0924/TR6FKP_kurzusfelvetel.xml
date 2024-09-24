@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE TR6FKP_kurzusfelvetel SYSTEM "TR6FKP_kurzusfelvetel.dtd">
+
+<TR6FKP_kurzusfelvetel tanev="2024/2025/I" egyetem="ME">
+    <hallgato>
+        <hnev>PA</hnev>
+        <szulev>2001</szulev>
+        <szak evf="3">Programtervező Informatikus</szak>
+    </hallgato>
+    <kurzusok>
+
+        <kurzus id="GEIAL332-B" jovahagyas="igen" nyelv="magyar">
+            <kurzusnev>Adatkezelés XML-ben</kurzusnev>
+            <kredit>5</kredit>
+            <hely>Inf/103</hely>
+            <idopont>K:10-12</idopont>
+            <oktato>Dr. Bednarik László</oktato>
+            <oraado>Dr. Bednarik László</oraado>
+        </kurzus>
+        <kurzus id="GEIAK130-B" jovahagyas="igen" nyelv="magyar">
+            <kurzusnev>Mesterséges intelligencia alapok</kurzusnev>
+            <kredit>5</kredit>
+            <hely>E32</hely>
+            <idopont>SZ:16-18</idopont>
+            <oktato>Fazekas Levente Áron</oktato>
+            <oraado>Fazekas Levente Áron</oraado>
+        </kurzus>
+        <kurzus id="GEMAK253-B">
+            <kurzusnev>Szakdolgozatkészítés I.</kurzusnev>
+            <kredit>5</kredit>
+            <hely></hely>
+            <idopont></idopont>
+            <oktato>Dr. Fegyverneki Sándor</oktato>
+        </kurzus>
+    </kurzusok>
+
+</TR6FKP_kurzusfelvetel>
