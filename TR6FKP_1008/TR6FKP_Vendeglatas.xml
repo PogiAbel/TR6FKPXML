@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TR6FKP_Vendeglatas>
+    
+    <etterem ekod="e1">
+        <nev>Trofea</nev>
+        <cim>
+            <varos>Miskolc</varos>
+            <utca>Peteri utca</utca>
+            <hazszam>12</hazszam>
+        </cim>
+        <csillag>4</csillag>
+    </etterem>
+    
+    <etterem ekod="e2">
+        <nev>Gundel</nev>
+        <cim>
+            <varos>Miskolc</varos>
+            <utca>Arany János utca</utca>
+            <hazszam>17</hazszam>
+        </cim>
+        <csillag>5</csillag>
+    </etterem>
+
+    <foszakacs fkod="f1" e_f="e1" >
+        <nev>havas Peter</nev>
+        <eletkor>34</eletkor>
+        <vegzetseg>Fonok</vegzetseg>
+        <vegzetseg>Alkalmazott</vegzetseg>
+    </foszakacs>
+
+    <foszakacs fkod="f2" e_f="e2" >
+        <nev>Hollos Peter</nev>
+        <eletkor>14</eletkor>
+        <vegzetseg>Fonok</vegzetseg>
+        <vegzetseg>Alkalmazott</vegzetseg>
+    </foszakacs>
+
+    <szakacs szkod="sz1" e_sz="e1">
+        <nev></nev>
+        <reszleg></reszleg>
+        <vegzettseg></vegzettseg>
+        <vegzettseg></vegzettseg>
+        <vegzettseg></vegzettseg>
+    </szakacs>
+
+    <szakacs szkod="sz2" e_sz="e2">
+        <nev></nev>
+        <reszleg></reszleg>
+        <vegzettseg></vegzettseg>
+        <vegzettseg></vegzettseg>
+        <vegzettseg></vegzettseg>
+    </szakacs>
+    
+    <szakacs szkod="sz3" e_sz="e2">
+        <nev></nev>
+        <reszleg></reszleg>
+        <vegzettseg></vegzettseg>
+        <vegzettseg></vegzettseg>
+        <vegzettseg></vegzettseg>
+    </szakacs>
+
+
+    <gyakornok gykod="gy1" e_gy="e1">
+        <nev>Pogonyi Ábel Kürt</nev>
+        <gyakorlat>
+            <kezdete>2024.10.08</kezdete>
+            <idotartama>2 hónap</idotartama>
+        </gyakorlat>
+        <muszak>Délelőtt</muszak>
+        <muszak>Este</muszak>
+    </gyakornok>
+
+    <rendeles vkod="v1" e_r="e1">
+        <osszeg>1200</osszeg>
+        <etel>Rantothus</etel>
+    </rendeles>
+    
+    <vendeg vkod="v1">
+        <nev>PA</nev>
+        <eletkor>21</eletkor>
+        <cim>
+            <varos>Miskolc</varos>
+            <utca>Peteri utca</utca>
+            <hazszam>12</hazszam>
+        </cim>
+    </vendeg>
+</TR6FKP_Vendeglatas>
