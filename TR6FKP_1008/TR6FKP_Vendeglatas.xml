@@ -71,11 +71,11 @@
         <muszak>Este</muszak>
     </gyakornok>
 
-    <rendeles vkod="v1" e_r="e1">
+    <rendeles e_v_e="v1" e_v_v="e1">
         <osszeg>1200</osszeg>
         <etel>Rantothus</etel>
     </rendeles>
-    
+
     <vendeg vkod="v1">
         <nev>PA</nev>
         <eletkor>21</eletkor>
