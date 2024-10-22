@@ -35,7 +35,7 @@ public class DomWriteTR6FKP
 
         transf.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
         transf.setOutputProperty(OutputKeys.INDENT, "yes");
-        transf.setOutputProperty(OutputKeys.STANDALONE, "2");
+        transf.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
 
         DOMSource source = new DOMSource(doc);
 
