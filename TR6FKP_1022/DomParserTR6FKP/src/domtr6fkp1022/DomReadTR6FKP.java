@@ -18,8 +18,10 @@ public class DomReadTR6FKP
     {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
+
         Document doc = builder.parse(new File("./TR6FKP_1022/hallgato.xml"));
-        org.w3c.dom.Element root = doc.getDocumentElement();
+        Element root = doc.getDocumentElement();
+        
         System.out.println("Gyökér elem: " + root.getNodeName() + "\n");
 
         NodeList childNodes = root.getElementsByTagName("hallgato");
