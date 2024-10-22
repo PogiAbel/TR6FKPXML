@@ -40,7 +40,7 @@ public class DomWriteTR6FKP
         DOMSource source = new DOMSource(doc);
 
         StreamResult console = new StreamResult(System.out);
-        StreamResult file = new StreamResult("./TR6FKP_1022/hallgatok1.xml");
+        StreamResult file = new StreamResult("./TR6FKP_1022/hallgato1.xml");
 
         transf.transform(source, console);
         transf.transform(source, file);
