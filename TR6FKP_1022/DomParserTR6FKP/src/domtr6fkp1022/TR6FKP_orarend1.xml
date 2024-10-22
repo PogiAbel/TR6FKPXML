@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<orarend xmlns="DOMTR6FKP">
+  <ora id="e1" tipus="eloadas">
+    <targy>Adatkezelés XML-ben</targy>
+    <idopont>
+      <nap>Kedd</nap>
+      <tol>10</tol>
+      <ig>12</ig>
+    </idopont>
+    <helyszin>Inf/103</helyszin>
+    <oktato>Dr. Bednarik László</oktato>
+    <szak>Programtervező Informatikus</szak>
+  </ora>
+  <ora id="g1" tipus="gyakorlat">
+    <targy>Adatkezelés XML-ben</targy>
+    <idopont>
+      <nap>Kedd</nap>
+      <tol>12</tol>
+      <ig>14</ig>
+    </idopont>
+    <helyszin>Inf/103</helyszin>
+    <oktato>Dr. Bednarik László</oktato>
+    <szak>Programtervező Informatikus</szak>
+  </ora>
+  <ora id="g2" tipus="gyakorlat">
+    <targy>Mesterséges intelligencia alapok</targy>
+    <idopont>
+      <nap>Szerda</nap>
+      <tol>10</tol>
+      <ig>12</ig>
+    </idopont>
+    <helyszin>E10</helyszin>
+    <oktato>Fazekas Levente Áron</oktato>
+    <szak>Programtervező Informatikus</szak>
+  </ora>
+  <ora id="e2" tipus="eloadas">
+    <targy>Mesterséges intelligencia alapok</targy>
+    <idopont>
+      <nap>Szerda</nap>
+      <tol>16</tol>
+      <ig>18</ig>
+    </idopont>
+    <helyszin>E32</helyszin>
+    <oktato>Kunné Dr. Tamás Judit</oktato>
+    <szak>Programtervező Informatikus</szak>
+  </ora>
+</orarend>
