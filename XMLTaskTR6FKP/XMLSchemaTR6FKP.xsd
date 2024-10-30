@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified">
+
+    <!-- Sajat tipusok deklaralasa -->
+    <xs:element name="TR6FKP_Iskolak">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="iskola" type="iskolaTipus" maxOccurs="unbounded"/>
+                <xs:element name="dolgozo" type="dolgozoTipus" maxOccurs="unbounded"/>
+                <xs:element name="igazgato" type="igazgatoTipus" maxOccurs="unbounded"/>
+                <xs:element name="tanar" type="tanarTipus" maxOccurs="unbounded"/>
+                <xs:element name="oktat" type="oktatTipus" maxOccurs="unbounded"/>
+                <xs:element name="tanulo" type="tanuloTipus" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+        
+        <!-- Pk kulcsok deklaralasa -->
+        <xs:key name="iskola_kulcs">
+            <xs:selector xpath="iskola"/>
+            <xs:field xpath="@iskola_id"/>
+        </xs:key>
+        
+        <xs:key name="dolgozo_kulcs">
+            <xs:selector xpath="dolgozo"/>
+            <xs:field xpath="@dolgozo_id"/>
+        </xs:key>
+        
+        <xs:key name="igazgato_kulcs">
+            <xs:selector xpath="igazgato"/>
+            <xs:field xpath="@igazgato_id"/>
+        </xs:key>
+        
+        <xs:key name="tanar_kulcs">
+            <xs:selector xpath="tanar"/>
+            <xs:field xpath="@tanar_id"/>
+        </xs:key>
+        
+        <xs:key name="tanulo_kulcs">
+            <xs:selector xpath="tanulo"/>
+            <xs:field xpath="@tanulo_id"/>
+        </xs:key>
+        
+        <!-- Idegen kulcsok deklaralasa -->
+        <xs:keyref refer="iskola_kulcs" name="dolgozo_idegen_kulcs" >
+            <xs:selector xpath="dolgozo"/>
+            <xs:field xpath="@iskola_fid"/>
+        </xs:keyref>
+        
+        <xs:keyref refer="iskola_kulcs" name="igazgato_idegen_kulcs" >
+            <xs:selector xpath="igazgato"/>
+            <xs:field xpath="@iskola_fid"/>
+        </xs:keyref>
+        
+        <xs:keyref refer="tanar_kulcs" name="tanar_oktat_idegen_kulcs" >
+            <xs:selector xpath="oktat"/>
+            <xs:field xpath="@tanar_fid"/>
+        </xs:keyref>
+
+        <xs:keyref refer="iskola_kulcs" name="iskola_oktat_idegen_kulcs" >
+            <xs:selector xpath="oktat"/>
+            <xs:field xpath="@iskola_fid"/>
+        </xs:keyref>
+        
+        <xs:keyref refer="tanar_kulcs" name="tanar_tanulo_idegen_kulcs" >
+            <xs:selector xpath="tanulo"/>
+            <xs:field xpath="@tanar_fid"/>
+        </xs:keyref>
+        
+        <xs:keyref refer="iskola_kulcs" name="iskola_tanulo_idegen_kulcs" >
+            <xs:selector xpath="tanulo"/>
+            <xs:field xpath="@iskola_fid"/>
+        </xs:keyref>
+        
+        <!-- 1:1 kapcsolat megavolsitasa -->
+        <xs:unique name="unique_igazgato">
+            <xs:selector xpath="igazgato"/>
+            <xs:field xpath="@iskola_fid"/>
+        </xs:unique>
+
+    </xs:element>
+        
+    <!-- Komplex tipusok deklaralasa -->
+    <xs:complexType name="iskolaTipus">
+        <xs:sequence>
+            <xs:element name="nev" type="xs:string"/>
+            <xs:element name="cim" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="iskola_id" type="xs:string" use="required"/>
+        <xs:attribute name="tanulok_szama">
+            <xs:simpleType>
+                <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="0"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="dolgozoTipus">
+        <xs:sequence>
+            <xs:element name="nev" type="nevTipus"/>
+            <xs:element name="fizetes" type="fizetesTipus"/>
+            <xs:element name="beosztas" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="dolgozo_id" type="xs:string" use="required"/>
+        <xs:attribute name="iskola_fid" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="nevTipus">
+        <xs:sequence>
+            <xs:element name="vezeteknev" type="xs:string"/>
+            <xs:element name="keresztnev" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="fizetesTipus">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="igazgatoTipus">
+        <xs:sequence>
+            <xs:element name="nev" type="nevTipus"/>
+            <xs:element name="fizetes" type="fizetesTipus"/>
+            <xs:element name="telefonszam" type="telefonszamTipus" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="igazgato_id" type="xs:string" use="required"/>
+        <xs:attribute name="iskola_fid" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:simpleType name="telefonszamTipus">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\+36/\d{2} \d{3}-\d{4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="tanarTipus">
+        <xs:sequence>
+            <xs:element name="nev" type="nevTipus"/>
+            <xs:element name="fizetes" type="xs:integer"/>
+            <xs:element name="telefonszam" type="telefonszamTipus" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="diakok_szama">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="szak" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="osztaly" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="tanar_id" type="xs:string" use="required"/>    </xs:complexType>
+
+    <xs:complexType name="oktatTipus">
+        <xs:sequence>
+            <xs:element name="osztaly" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="iskola_fid" type="xs:string" use="required"/>
+        <xs:attribute name="tanar_fid" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="tanuloTipus">
+        <xs:sequence>
+            <xs:element name="nev" type="nevTipus"/>
+            <xs:element name="osztaly" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="tanulo_id" type="xs:string" use="required"/>
+        <xs:attribute name="iskola_fid" type="xs:string" use="required"/>
+        <xs:attribute name="tanar_fid" type="xs:string" use="required"/>
+    </xs:complexType>
+
+</xs:schema>
