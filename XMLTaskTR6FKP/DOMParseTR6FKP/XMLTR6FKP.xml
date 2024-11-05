@@ -106,20 +106,17 @@
         <diakok_szama>30</diakok_szama>
         <szak>Magyar</szak>
         <szak>Matek</szak>
-        <osztaly>10c</osztaly>
     </tanar>
 
     <tanar tanar_id="t3">
         <nev>
             <vezeteknev>Szegény</vezeteknev>
-            <keresztnev>ÉVa</keresztnev>
+            <keresztnev>Mária</keresztnev>
         </nev>
         <fizetes>30000</fizetes>
         <telefonszam>+36/20 001-1122</telefonszam>
         <diakok_szama>60</diakok_szama>
         <szak>Tesi</szak>
-        <osztaly>11c</osztaly>
-        <osztaly>9a</osztaly>
     </tanar>
 
     <!-- Tanárok - Iskola n:m kapcsolatok -->

@@ -147,7 +147,6 @@
                 </xs:simpleType>
             </xs:element>
             <xs:element name="szak" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
-            <xs:element name="osztaly" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="tanar_id" type="xs:string" use="required"/>    </xs:complexType>
 
