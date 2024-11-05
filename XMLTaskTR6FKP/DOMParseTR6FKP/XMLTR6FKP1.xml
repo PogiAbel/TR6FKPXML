@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TR6FKP_Iskolak xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XMLSchemaTR6FKP.xsd">
+  <iskola iskola_id="i1" tanulok_szama="111">
+    <nev>Minta Iskola 1</nev>
+    <cim>Minta cím 1</cim>
+  </iskola>
+  <iskola iskola_id="i2" tanulok_szama="222">
+    <nev>Minta Iskola 2</nev>
+    <cim>Minta cím 2</cim>
+  </iskola>
+  <iskola iskola_id="i3" tanulok_szama="333">
+    <nev>Minta Iskola 3</nev>
+    <cim>Minta cím 3</cim>
+  </iskola>
+  <dolgozo dolgozo_id="d1" iskola_fid="i1">
+    <nev>
+      <vezeteknev>Minta</vezeteknev>
+      <keresztnev>János</keresztnev>
+    </nev>
+    <fizetes>10000</fizetes>
+    <beosztas>Mosogató</beosztas>
+  </dolgozo>
+  <dolgozo dolgozo_id="d2" iskola_fid="i2">
+    <nev>
+      <vezeteknev>Minta</vezeteknev>
+      <keresztnev>Péter</keresztnev>
+    </nev>
+    <fizetes>12000</fizetes>
+    <beosztas>Szakács</beosztas>
+  </dolgozo>
+  <dolgozo dolgozo_id="d3" iskola_fid="i3">
+    <nev>
+      <vezeteknev>Minta</vezeteknev>
+      <keresztnev>Ákos</keresztnev>
+    </nev>
+    <fizetes>14000</fizetes>
+    <beosztas>Gondnok</beosztas>
+  </dolgozo>
+  <igazgato igazgato_id="i1" iskola_fid="i1">
+    <nev>
+      <vezeteknev>Gazdag</vezeteknev>
+      <keresztnev>István</keresztnev>
+    </nev>
+    <fizetes>180000</fizetes>
+    <telefonszam>+36/70 123-1234</telefonszam>
+    <telefonszam>+36/70 123-1234</telefonszam>
+  </igazgato>
+  <igazgato igazgato_id="i2" iskola_fid="i2">
+    <nev>
+      <vezeteknev>Gazdag</vezeteknev>
+      <keresztnev>Kornél</keresztnev>
+    </nev>
+    <fizetes>200000</fizetes>
+    <telefonszam>+36/70 111-1234</telefonszam>
+    <telefonszam>+36/70 112-1234</telefonszam>
+  </igazgato>
+  <igazgato igazgato_id="i3" iskola_fid="i3">
+    <nev>
+      <vezeteknev>Gazdag</vezeteknev>
+      <keresztnev>Sándor</keresztnev>
+    </nev>
+    <fizetes>280000</fizetes>
+    <telefonszam>+36/70 003-1234</telefonszam>
+    <telefonszam>+36/70 023-1234</telefonszam>
+    <telefonszam>+36/70 000-1234</telefonszam>
+  </igazgato>
+  <tanar tanar_id="t1">
+    <nev>
+      <vezeteknev>Szegény</vezeteknev>
+      <keresztnev>Éva</keresztnev>
+    </nev>
+    <fizetes>50000</fizetes>
+    <telefonszam>+36/20 001-0002</telefonszam>
+    <diakok_szama>0</diakok_szama>
+    <szak>Kémia</szak>
+    <szak>Angol</szak>
+  </tanar>
+  <tanar tanar_id="t2">
+    <nev>
+      <vezeteknev>Szegény</vezeteknev>
+      <keresztnev>Irén</keresztnev>
+    </nev>
+    <fizetes>45000</fizetes>
+    <telefonszam>+36/20 111-0002</telefonszam>
+    <diakok_szama>30</diakok_szama>
+    <szak>Magyar</szak>
+    <szak>Matek</szak>
+  </tanar>
+  <tanar tanar_id="t3">
+    <nev>
+      <vezeteknev>Szegény</vezeteknev>
+      <keresztnev>Mária</keresztnev>
+    </nev>
+    <fizetes>30000</fizetes>
+    <telefonszam>+36/20 001-1122</telefonszam>
+    <diakok_szama>60</diakok_szama>
+    <szak>Tesi</szak>
+  </tanar>
+  <oktat iskola_fid="i1" tanar_fid="t1"/>
+  <oktat iskola_fid="i2" tanar_fid="t2">
+    <osztaly>10c</osztaly>
+  </oktat>
+  <oktat iskola_fid="i1" tanar_fid="t3">
+    <osztaly>11c</osztaly>
+  </oktat>
+  <oktat iskola_fid="i2" tanar_fid="t3">
+    <osztaly>9a</osztaly>
+  </oktat>
+  <tanulo iskola_fid="i1" tanar_fid="t3" tanulo_id="t1">
+    <nev>
+      <vezeteknev>Sima</vezeteknev>
+      <keresztnev>Áron</keresztnev>
+    </nev>
+    <osztaly>10c</osztaly>
+  </tanulo>
+  <tanulo iskola_fid="i2" tanar_fid="t3" tanulo_id="t2">
+    <nev>
+      <vezeteknev>Sima</vezeteknev>
+      <keresztnev>Anna</keresztnev>
+    </nev>
+    <osztaly>11c</osztaly>
+  </tanulo>
+  <tanulo iskola_fid="i3" tanar_fid="t2" tanulo_id="t3">
+    <nev>
+      <vezeteknev>Sima</vezeteknev>
+      <keresztnev>Eszter</keresztnev>
+    </nev>
+    <osztaly>9a</osztaly>
+  </tanulo>
+</TR6FKP_Iskolak>
