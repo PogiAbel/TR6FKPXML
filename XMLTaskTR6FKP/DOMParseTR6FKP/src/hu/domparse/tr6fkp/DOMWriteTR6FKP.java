@@ -1,5 +1,6 @@
 package hu.domparse.tr6fkp;
 
+import java.io.File;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -9,6 +10,7 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.stream.StreamSource;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -56,20 +58,21 @@ public class DOMWriteTR6FKP
         root.appendChild(createStudent(doc, "t3", "i3", "t2", "Sima", "Eszter", "9a"));
         
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
-        Transformer transf = transformerFactory.newTransformer();
-
+        transformerFactory.setAttribute("indent-number", 2);
+        
+        Transformer transf = transformerFactory.newTransformer(new StreamSource(new File("./XMLTaskTR6FKP/DOMParseTR6FKP/pretty.xsl")));
         transf.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
         transf.setOutputProperty(OutputKeys.INDENT, "yes");
-        transf.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
-        transf.setOutputProperty(OutputKeys.STANDALONE, "yes");
 
+        doc.setXmlStandalone(true);
         DOMSource source = new DOMSource(doc);
 
-        StreamResult console = new StreamResult(System.out);
-        StreamResult file = new StreamResult("./XMLTR6FKP1.xml");
+        StreamResult console = new StreamResult(System.console().writer());
+        StreamResult file = new StreamResult("./XMLTaskTR6FKP/DOMParseTR6FKP/XMLTR6FKP1.xml");
 
         transf.transform(source, console);
         transf.transform(source, file);
+
     }
 
     private static Node createSchool(Document doc, String iskola_id, String tanulok_szama, String nev, String cim){
