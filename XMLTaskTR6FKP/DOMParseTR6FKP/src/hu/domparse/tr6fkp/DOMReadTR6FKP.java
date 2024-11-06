@@ -18,7 +18,7 @@ public class DOMReadTR6FKP {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
 
-        Document doc = builder.parse(new File("./XMLTR6FKP.xml"));
+        Document doc = builder.parse(new File("./XMLTaskTR6FKP/DOMParseTR6FKP/XMLTR6FKP.xml"));
         Element root = doc.getDocumentElement();
         
         System.out.println("Gyökér elem: " + root.getNodeName() + "\n");
