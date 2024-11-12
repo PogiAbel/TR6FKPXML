@@ -142,18 +142,20 @@ public class DOMReadTR6FKP {
                 String id = element.getAttribute("iskola_fid");
                 String fid = element.getAttribute("tanar_fid");
 
-                Node node1 = element.getElementsByTagName("osztaly").item(0);
-                String osztaly;
-                try {
-                    osztaly = "Osztály: " + node1.getTextContent() + "\n";
-                    
-                } catch (Exception e) {
-                    osztaly = "";
-                }
-
                 System.out.println("Iskola idegen kulcs: " + id);
                 System.out.println("Tanár idegen kulcs: " + fid);
-                System.out.print(osztaly);
+
+                NodeList node1 = element.getElementsByTagName("osztaly");
+                String osztaly;
+                for (int j = 0; j < node1.getLength(); j++) {
+                    Element elem = (Element) node1.item(j);
+                    try {
+                        osztaly = "Osztály: " + elem.getTextContent() + "\n";
+                        System.out.print(osztaly);
+                        
+                    } catch (Exception e) {
+                    }
+                }
                 System.out.print("\n");
             }
         }
