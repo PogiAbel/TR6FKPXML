@@ -1,0 +1,55 @@
+{
+ "PA_orarend":[
+  {
+   "targy":"Adatkezelés XML-ben",
+   "oktato":"Dr. Bednarik László",
+   "szak":"Programtervező Informatikus",
+   "idopont":{
+    "tol":"10",
+    "nap":"Kedd",
+    "ig":"12"}
+   ,
+   "id":"e1",
+   "helyszin":"Inf\/103",
+   "tipus":"eloadas"}
+  ,
+  {
+   "targy":"Adatkezelés XML-ben",
+   "oktato":"Dr. Bednarik László",
+   "szak":"Programtervező Informatikus",
+   "idopont":{
+    "tol":"12",
+    "nap":"Kedd",
+    "ig":"13"}
+   ,
+   "id":"g1",
+   "helyszin":"Inf\/103",
+   "tipus":"gyakorlat"}
+  ,
+  {
+   "targy":"Mesterséges intelligencia alapok",
+   "oktato":"Fazekas Levente Áron",
+   "szak":"Programtervező Informatikus",
+   "idopont":{
+    "tol":"8",
+    "nap":"Szerda",
+    "ig":"10"}
+   ,
+   "id":"g2",
+   "helyszin":"E10",
+   "tipus":"gyakorlat"}
+  ,
+  {
+   "targy":"Mesterséges intelligencia alapok",
+   "oktato":"Kunné Dr. Tamás Judit",
+   "szak":"Programtervező Informatikus",
+   "idopont":{
+    "tol":"16",
+    "nap":"Szerda",
+    "ig":"18"}
+   ,
+   "id":"e2",
+   "helyszin":"E32",
+   "tipus":"eloadas"}
+  ]
+ }
