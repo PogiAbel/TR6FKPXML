@@ -141,21 +141,11 @@ public class DOMReadTR6FKP {
                 Element element = (Element) nNode;
                 String id = element.getAttribute("iskola_fid");
                 String fid = element.getAttribute("tanar_fid");
+                NodeList osztalyok = element.getElementsByTagName("osztaly");
 
                 System.out.println("Iskola idegen kulcs: " + id);
                 System.out.println("Tanár idegen kulcs: " + fid);
-
-                NodeList node1 = element.getElementsByTagName("osztaly");
-                String osztaly;
-                for (int j = 0; j < node1.getLength(); j++) {
-                    Element elem = (Element) node1.item(j);
-                    try {
-                        osztaly = "Osztály: " + elem.getTextContent() + "\n";
-                        System.out.print(osztaly);
-                        
-                    } catch (Exception e) {
-                    }
-                }
+                System.out.print(getListString(osztalyok, "Osztály: "));
                 System.out.print("\n");
             }
         }

@@ -133,6 +133,7 @@
 
     <oktat iskola_fid="i2" tanar_fid="t3">
         <osztaly>9a</osztaly>
+        <osztaly>10a</osztaly>
     </oktat>
 
     <!-- Tanulók -->
