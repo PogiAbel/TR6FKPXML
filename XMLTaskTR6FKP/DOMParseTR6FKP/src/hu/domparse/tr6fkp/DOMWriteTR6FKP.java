@@ -4,7 +4,6 @@ import java.io.File;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
@@ -58,13 +57,9 @@ public class DOMWriteTR6FKP
         root.appendChild(createStudent(doc, "t3", "i3", "t2", "Sima", "Eszter", "9a"));
         
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
-        transformerFactory.setAttribute("indent-number", 2);
         
         Transformer transf = transformerFactory.newTransformer(new StreamSource(new File("./XMLTaskTR6FKP/DOMParseTR6FKP/pretty.xsl")));
-        transf.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
-        transf.setOutputProperty(OutputKeys.INDENT, "yes");
 
-        doc.setXmlStandalone(true);
         DOMSource source = new DOMSource(doc);
 
         StreamResult console = new StreamResult(System.console().writer());
