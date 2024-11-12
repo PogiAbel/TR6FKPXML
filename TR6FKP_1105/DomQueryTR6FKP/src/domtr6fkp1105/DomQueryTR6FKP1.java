@@ -22,11 +22,13 @@ public class DomQueryTR6FKP1 {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
 
+        // TR6FKP_1105/DomQueryTR6FKP/
+
         Document doc = builder.parse("./TR6FKP_orarend.xml");
 
         // taskA(doc);
-        taskB(doc);
-        // taskC(doc);
+        // taskB(doc);
+        taskC(doc);
 
     }
 
