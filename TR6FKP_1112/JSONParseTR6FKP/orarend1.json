@@ -7,12 +7,10 @@
    "idopont":{
     "tol":"10",
     "nap":"Kedd",
-    "ig":"12"}
-   ,
+    "ig":"12"},
    "id":"e1",
    "helyszin":"Inf\/103",
-   "tipus":"eloadas"}
-  ,
+   "tipus":"eloadas"},
   {
    "targy":"Adatkezelés XML-ben",
    "oktato":"Dr. Bednarik László",
@@ -20,12 +18,10 @@
    "idopont":{
     "tol":"12",
     "nap":"Kedd",
-    "ig":"13"}
-   ,
+    "ig":"13"},
    "id":"g1",
    "helyszin":"Inf\/103",
-   "tipus":"gyakorlat"}
-  ,
+   "tipus":"gyakorlat"},
   {
    "targy":"Mesterséges intelligencia alapok",
    "oktato":"Fazekas Levente Áron",
@@ -33,12 +29,10 @@
    "idopont":{
     "tol":"8",
     "nap":"Szerda",
-    "ig":"10"}
-   ,
+    "ig":"10"},
    "id":"g2",
    "helyszin":"E10",
-   "tipus":"gyakorlat"}
-  ,
+   "tipus":"gyakorlat"},
   {
    "targy":"Mesterséges intelligencia alapok",
    "oktato":"Kunné Dr. Tamás Judit",
@@ -46,8 +40,7 @@
    "idopont":{
     "tol":"16",
     "nap":"Szerda",
-    "ig":"18"}
-   ,
+    "ig":"18"},
    "id":"e2",
    "helyszin":"E32",
    "tipus":"eloadas"}

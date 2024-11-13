@@ -25,11 +25,11 @@ public class JSONWriteTR6FKP {
         }
 
         try {
-            FileWriter writer = new FileWriter("./orarend1.json");
+            FileWriter writer = new FileWriter("./TR6FKP_1112/JSONParseTR6FKP/orarend1.json");
             writer.write(indentJson(root.toJSONString()));
             writer.close();
         } catch (Exception e) {
-            // TODO: handle exception
+            e.printStackTrace();
         }
     }
 
@@ -74,7 +74,7 @@ public class JSONWriteTR6FKP {
                 out += "\n" + " ".repeat(indent>0? indent : 0);
             } else if (json.charAt(i) == '}' || json.charAt(i) == ']') {
                 indent--;
-                out += "\n" + " ".repeat(indent>0? indent:0); 
+                if( json.charAt(i+1) != ',') out += "\n" + " ".repeat(indent>0? indent:0); 
             }
         }
 
