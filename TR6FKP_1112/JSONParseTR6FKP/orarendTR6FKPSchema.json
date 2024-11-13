@@ -1,0 +1,77 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "type": "object",
+    "properties": {
+      "PA_orarend": {
+        "type": "object",
+        "properties": {
+          "$": {
+            "type": "object",
+            "properties": {
+              "xmlns:xsi": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "xmlns:xsi"
+            ]
+          },
+          "ora": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "tipus": {
+                  "type": "string"
+                },
+                "targy": {
+                  "type": "string"
+                },
+                "idopont": {
+                  "type": "object",
+                  "properties": {
+                    "nap": {
+                      "type": "string"
+                    },
+                    "tol": {
+                      "type": "string"
+                    },
+                    "ig": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "nap",
+                    "tol",
+                    "ig"
+                  ]
+                },
+                "helyszin": {
+                  "type": "string"
+                },
+                "oktato": {
+                  "type": "string"
+                },
+                "szak": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "tipus",
+                "targy",
+                "idopont",
+                "helyszin",
+                "oktato",
+                "szak"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+  
