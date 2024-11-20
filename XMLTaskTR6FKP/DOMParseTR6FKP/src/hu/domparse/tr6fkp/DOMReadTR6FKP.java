@@ -1,6 +1,7 @@
 package hu.domparse.tr6fkp;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -21,8 +22,7 @@ public class DOMReadTR6FKP {
         Document doc = builder.parse(new File("./XMLTaskTR6FKP/DOMParseTR6FKP/XMLTR6FKP.xml"));
         Element root = doc.getDocumentElement();
         
-        System.out.println("Gyökér elem: " + root.getNodeName() + "\n");
-
+        
         NodeList iskolak = root.getElementsByTagName("iskola");
         NodeList dolgozok = root.getElementsByTagName("dolgozo");
         NodeList igazgatok = root.getElementsByTagName("igazgato");
@@ -30,10 +30,12 @@ public class DOMReadTR6FKP {
         NodeList oktatasok = root.getElementsByTagName("oktat");
         NodeList tanulok = root.getElementsByTagName("tanulo");
 
+        String out = "";
+
         for (int i = 0; i < iskolak.getLength(); i++)
         {
             Node nNode = iskolak.item(i);
-            System.out.println("Aktuális elem: " + nNode.getNodeName());
+                        out += "Aktuális elem: " + nNode.getNodeName() + "\n";
 
             if (nNode.getNodeType() == Node.ELEMENT_NODE){
                 Element element = (Element) nNode;
@@ -45,17 +47,18 @@ public class DOMReadTR6FKP {
                 Node node2 = element.getElementsByTagName("cim").item(0);
                 String cim = node2.getTextContent();
 
-                System.out.println("Iskola ID: " + id);
-                System.out.println("Tanulók száma: " + tanulokSzama);
-                System.out.println("Név: " + nev);
-                System.out.println("Cím: " + cim + "\n");
+                                                                                
+                out += "Iskola ID: " + id + "\n";
+                out += "Tanulók száma: " + tanulokSzama + "\n";
+                out += "Név: " + nev + "\n";
+                out += "Cím: " + cim + "\n\n";
             }
         }
 
         for (int i = 0; i < dolgozok.getLength(); i++)
         {
             Node nNode = dolgozok.item(i);
-            System.out.println("Aktuális elem: " + nNode.getNodeName());
+                        out += "Aktuális elem: " + nNode.getNodeName() + "\n";
 
             if (nNode.getNodeType() == Node.ELEMENT_NODE){
                 Element element = (Element) nNode;
@@ -69,18 +72,20 @@ public class DOMReadTR6FKP {
                 Node node3 = element.getElementsByTagName("beosztas").item(0);
                 String beosztas = node3.getTextContent();
 
-                System.out.println("Dolgozo ID: " + id);
-                System.out.println("Iskola idegen kulcs: " + fid);
-                System.out.println(nev);
-                System.out.println("Fizetés: " + fizetes);
-                System.out.println("Beosztás: " + beosztas + "\n");
+                                                                                
+                out += "Dolgozo ID: " + id + "\n";
+                out += "Iskola idegen kulcs: " + fid + "\n";
+                out += nev + "\n";
+                out += "Fizetés: " + fizetes + "\n";
+                out += "Beosztás: " + beosztas + "\n\n";
             }
         }
 
         for (int i = 0; i < igazgatok.getLength(); i++)
         {
             Node nNode = igazgatok.item(i);
-            System.out.println("Aktuális elem: " + nNode.getNodeName());
+            
+            out += "Aktuális elem: " + nNode.getNodeName() + "\n";
 
             if (nNode.getNodeType() == Node.ELEMENT_NODE){
                 Element element = (Element) nNode;
@@ -94,19 +99,20 @@ public class DOMReadTR6FKP {
                 NodeList node3 = element.getElementsByTagName("telefonszam");
                 String telefonszamok = getListString(node3, "Telefonszám: ");
 
-                System.out.println("Igazgató ID: " + id);
-                System.out.println("Iskola idegen kulcs: " + fid);
-                System.out.println(nev);
-                System.out.println("Fizetés: " + fizetes);
-                System.out.print(telefonszamok);
-                System.out.print("\n");
+                                                                                                
+                out += "Igazgató ID: " + id + "\n";
+                out += "Iskola idegen kulcs: " + fid + "\n";
+                out += nev + "\n";
+                out += "Fizetés: " + fizetes + "\n";
+                out += telefonszamok + "\n";
             }
         }
 
         for (int i = 0; i < tanarok.getLength(); i++)
         {
             Node nNode = tanarok.item(i);
-            System.out.println("Aktuális elem: " + nNode.getNodeName());
+            
+            out += "Aktuális elem: " + nNode.getNodeName() + "\n";
 
             if (nNode.getNodeType() == Node.ELEMENT_NODE){
                 Element element = (Element) nNode;
@@ -123,19 +129,20 @@ public class DOMReadTR6FKP {
                 NodeList node5 = element.getElementsByTagName("szak");
                 String szakok = getListString(node5, "Szak: ");
 
-                System.out.println("Igazgató ID: " + id);
-                System.out.println(nev);
-                System.out.println("Fizetés: " + fizetes);
-                System.out.print(telefonszamok);
-                System.out.println("Diákok száma: " + diakok_szama);
-                System.out.print(szakok);
-                System.out.print("\n");
+                                                                                                                
+                out += "Igazgató ID: " + id + "\n";
+                out += nev + "\n";
+                out += "Fizetés: " + fizetes + "\n";
+                out += telefonszamok;
+                out += "Diákok száma: " + diakok_szama + "\n";
+                out += szakok + "\n";
             }
         }
 
         for (int i = 0; i < oktatasok.getLength(); i++) {
             Node nNode = oktatasok.item(i);
-            System.out.println("Aktuális elem: " + nNode.getNodeName());
+            
+            out += "Aktuális elem: " + nNode.getNodeName() + "\n";
 
             if (nNode.getNodeType() == Node.ELEMENT_NODE){
                 Element element = (Element) nNode;
@@ -143,16 +150,17 @@ public class DOMReadTR6FKP {
                 String fid = element.getAttribute("tanar_fid");
                 NodeList osztalyok = element.getElementsByTagName("osztaly");
 
-                System.out.println("Iskola idegen kulcs: " + id);
-                System.out.println("Tanár idegen kulcs: " + fid);
-                System.out.print(getListString(osztalyok, "Osztály: "));
-                System.out.print("\n");
+                                                                
+                out += "Iskola idegen kulcs: " + id + "\n";
+                out += "Tanár idegen kulcs: " + fid + "\n";
+                out += getListString(osztalyok, "Osztály: ") + "\n";
             }
         }
 
         for (int i = 0; i < tanulok.getLength(); i++) {
             Node nNode = tanulok.item(i);
-            System.out.println("Aktuális elem: " + nNode.getNodeName());
+            
+            out += "Aktuális elem: " + nNode.getNodeName() + "\n";
 
             if (nNode.getNodeType() == Node.ELEMENT_NODE){
                 Element element = (Element) nNode;
@@ -165,14 +173,22 @@ public class DOMReadTR6FKP {
                 Node node2 = element.getElementsByTagName("osztaly").item(0);
                 String osztaly = node2.getTextContent();
 
-                System.out.println("Tanuló ID: " + tanuloId);
-                System.out.println("Iskola idegen kulcs: " + iskolaFid);
-                System.out.println("Tanár idegen kulcs: " + tanarFid);
-                System.out.println(nev);
-                System.out.println("Osztály: " + osztaly);
-                System.out.print("\n");
+                                                                                                
+                out += "Tanuló ID: " + tanuloId + "\n";
+                out += "Iskola idegen kulcs: " + iskolaFid + "\n";
+                out += "Tanár idegen kulcs: " + tanarFid + "\n";
+                out += nev + "\n";
+                out += "Osztály: " + osztaly + "\n\n";
             }
         }
+
+        out = out.substring(0, out.length()-2);
+        System.out.println(out);
+
+        File file = new File("./XMLTaskTR6FKP/DOMParseTR6FKP/outputTR6FKP.txt");
+        FileWriter writer = new FileWriter(file);
+        writer.write(out);
+        writer.close();
     }
 
     static String getName(Node nevNode){

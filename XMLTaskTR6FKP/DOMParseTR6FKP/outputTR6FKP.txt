@@ -1,0 +1,142 @@
+Aktuális elem: iskola
+Iskola ID: i1
+Tanulók száma: 111
+Név: Minta Iskola 1
+Cím: Minta cím 1
+
+Aktuális elem: iskola
+Iskola ID: i2
+Tanulók száma: 222
+Név: Minta Iskola 2
+Cím: Minta cím 2
+
+Aktuális elem: iskola
+Iskola ID: i3
+Tanulók száma: 333
+Név: Minta Iskola 3
+Cím: Minta cím 3
+
+Aktuális elem: dolgozo
+Dolgozo ID: d1
+Iskola idegen kulcs: i1
+Név vezetéknév: Minta
+Név keresztnév: János
+Fizetés: 10000
+Beosztás: Mosogató
+
+Aktuális elem: dolgozo
+Dolgozo ID: d2
+Iskola idegen kulcs: i2
+Név vezetéknév: Minta
+Név keresztnév: Péter
+Fizetés: 12000
+Beosztás: Szakács
+
+Aktuális elem: dolgozo
+Dolgozo ID: d3
+Iskola idegen kulcs: i3
+Név vezetéknév: Minta
+Név keresztnév: Ákos
+Fizetés: 14000
+Beosztás: Gondnok
+
+Aktuális elem: igazgato
+Igazgató ID: i1
+Iskola idegen kulcs: i1
+Név vezetéknév: Gazdag
+Név keresztnév: István
+Fizetés: 180000
+Telefonszám: +36/70 123-1234
+Telefonszám: +36/70 123-1244
+
+Aktuális elem: igazgato
+Igazgató ID: i2
+Iskola idegen kulcs: i2
+Név vezetéknév: Gazdag
+Név keresztnév: Kornél
+Fizetés: 200000
+Telefonszám: +36/70 111-1234
+Telefonszám: +36/70 112-1234
+
+Aktuális elem: igazgato
+Igazgató ID: i3
+Iskola idegen kulcs: i3
+Név vezetéknév: Gazdag
+Név keresztnév: Sándor
+Fizetés: 280000
+Telefonszám: +36/70 003-1234
+Telefonszám: +36/70 023-1234
+Telefonszám: +36/70 000-1234
+
+Aktuális elem: tanar
+Igazgató ID: t1
+Név vezetéknév: Szegény
+Név keresztnév: Éva
+Fizetés: 50000
+Telefonszám: +36/20 001-0002
+Diákok száma: 0
+Szak: Kémia
+Szak: Angol
+
+Aktuális elem: tanar
+Igazgató ID: t2
+Név vezetéknév: Szegény
+Név keresztnév: Irén
+Fizetés: 45000
+Telefonszám: +36/20 111-0002
+Diákok száma: 30
+Szak: Magyar
+Szak: Matek
+
+Aktuális elem: tanar
+Igazgató ID: t3
+Név vezetéknév: Szegény
+Név keresztnév: Mária
+Fizetés: 30000
+Telefonszám: +36/20 001-1122
+Diákok száma: 60
+Szak: Tesi
+
+Aktuális elem: oktat
+Iskola idegen kulcs: i1
+Tanár idegen kulcs: t1
+
+Aktuális elem: oktat
+Iskola idegen kulcs: i2
+Tanár idegen kulcs: t2
+Osztály: 10c
+
+Aktuális elem: oktat
+Iskola idegen kulcs: i1
+Tanár idegen kulcs: t3
+Osztály: 11c
+
+Aktuális elem: oktat
+Iskola idegen kulcs: i2
+Tanár idegen kulcs: t3
+Osztály: 9a
+Osztály: 10a
+
+Aktuális elem: tanulo
+Tanuló ID: t1
+Iskola idegen kulcs: i1
+Tanár idegen kulcs: t3
+Név vezetéknév: Sima
+Név keresztnév: Áron
+Osztály: 10c
+
+Aktuális elem: tanulo
+Tanuló ID: t2
+Iskola idegen kulcs: i2
+Tanár idegen kulcs: t3
+Név vezetéknév: Sima
+Név keresztnév: Anna
+Osztály: 11c
+
+Aktuális elem: tanulo
+Tanuló ID: t3
+Iskola idegen kulcs: i3
+Tanár idegen kulcs: t2
+Név vezetéknév: Sima
+Név keresztnév: Eszter
+Osztály: 9a
