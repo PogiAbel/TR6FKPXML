@@ -28,18 +28,27 @@ public class xPathTR6FKP {
         // String pa = "class/student[last()-1]";
         // String pa = "class/student[position()<3]";
         // String pa = "class/*";
-        String pa = "//student[@*]";
+        // String pa = "//student[@*]";
+        // String pa = "//node()";
+        // String pa = "/class/student[kor>20]";
+        String pa = "//student/keresztnev | //student/vezeteknev";
 
         NodeList tr6fkp = (NodeList) xpath.compile(pa).evaluate(doc, javax.xml.xpath.XPathConstants.NODESET);
+
         for (int i = 0; i < tr6fkp.getLength(); i++) {
             Node node = tr6fkp.item(i);
-            System.out.println("\nAktualis elem: " + node.getNodeName());
-            Element elem = (Element) node;
-            System.out.println("Id: "+elem.getAttribute("id"));
-            System.out.println("Vezeteknev: "+elem.getElementsByTagName("vezeteknev").item(0).getTextContent());
-            System.out.println("Keresztnev: "+elem.getElementsByTagName("keresztnev").item(0).getTextContent());
-            System.out.println("Becenev: "+elem.getElementsByTagName("becenev").item(0).getTextContent());
-            System.out.println("Kor: "+elem.getElementsByTagName("kor").item(0).getTextContent());
+            if(node.getNodeType() == Node.ELEMENT_NODE){
+
+                System.out.println("\nAktualis elem: " + node.getNodeName());
+                if (node.getNodeName() == "student") {
+                    Element elem = (Element) node;
+                    System.out.println("Id: "+elem.getAttribute("id"));
+                    System.out.println("Vezeteknev: "+elem.getElementsByTagName("vezeteknev").item(0).getTextContent());
+                    System.out.println("Keresztnev: "+elem.getElementsByTagName("keresztnev").item(0).getTextContent());
+                    System.out.println("Becenev: "+elem.getElementsByTagName("becenev").item(0).getTextContent());
+                    System.out.println("Kor: "+elem.getElementsByTagName("kor").item(0).getTextContent());
+                }
+            }
         }
     }
     
