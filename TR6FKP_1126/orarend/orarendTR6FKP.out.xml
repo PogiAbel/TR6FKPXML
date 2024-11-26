@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+   <head>
+      <title>PA órarend - 24/25. I. félév</title>
+   </head>
+   <body>
+      <h1>PA órarend - 24/25. I. félév</h1>
+      <table border="1">
+         <tr>
+            <th>Tárgy</th>
+            <th>Nap</th>
+            <th>Időpont</th>
+            <th>Helyszín</th>
+            <th>Oktató</th>
+            <th>Szak</th>
+         </tr>
+         <tr>
+            <td>Adatkezelés XML-ben</td>
+            <td>Kedd</td>
+            <td>10-12</td>
+            <td>Inf/103</td>
+            <td>Dr. Bednarik László</td>
+            <td>Programtervező Informatikus</td>
+         </tr>
+         <tr>
+            <td>Adatkezelés XML-ben</td>
+            <td>Kedd</td>
+            <td>10-12</td>
+            <td>Inf/103</td>
+            <td>Dr. Bednarik László</td>
+            <td>Programtervező Informatikus</td>
+         </tr>
+         <tr>
+            <td>Mesterséges intelligencia alapok</td>
+            <td>Szerda</td>
+            <td>10-12</td>
+            <td>E10</td>
+            <td>Fazekas Levente Áron</td>
+            <td>Programtervező Informatikus</td>
+         </tr>
+         <tr>
+            <td>Adatkezelés XML-ben</td>
+            <td>Szerda</td>
+            <td>16-18</td>
+            <td>E32</td>
+            <td>Kunné Dr. Tamás Judit</td>
+            <td>Programtervező Informatikus</td>
+         </tr>
+      </table>
+   </body>
+</html>
