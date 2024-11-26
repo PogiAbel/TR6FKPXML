@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+   <head>
+      <title>Hallgatok adatai - for-each, value-of</title>
+   </head>
+   <body>
+      <h1>TR6FKP hallgatói</h1>
+      <table border="1">
+         <tr>
+            <th>ID</th>
+            <th>Vezetéknév</th>
+            <th>Keresztnév</th>
+            <th>Becenév</th>
+            <th>Kor</th>
+            <th>Ösztöndíj</th>
+         </tr>
+         <tr>
+            <th>01</th>
+            <td>Pogonyi</td>
+            <td>Ábel</td>
+            <td>Ábi</td>
+            <td>23</td>
+            <td>0</td>
+         </tr>
+         <tr>
+            <th>02</th>
+            <td>Vaskos</td>
+            <td>Péter</td>
+            <td>Petyó</td>
+            <td>24</td>
+            <td>60000</td>
+         </tr>
+         <tr>
+            <th>03</th>
+            <td>Zsoldos</td>
+            <td>Andrea</td>
+            <td>Andi</td>
+            <td>20</td>
+            <td>40000</td>
+         </tr>
+      </table>
+   </body>
+</html>
