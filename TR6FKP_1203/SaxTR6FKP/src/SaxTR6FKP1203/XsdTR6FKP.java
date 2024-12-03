@@ -37,9 +37,9 @@ public class XsdTR6FKP {
         @Override
         public void endDocument() {
             if (valid){
-                System.out.println("XML is valid");
+                System.out.println("XSD Validation successful!");
             } else {
-                System.out.println("XML is not valid");
+                System.out.println("XSD Validation failed!");
             }
         }
     }
